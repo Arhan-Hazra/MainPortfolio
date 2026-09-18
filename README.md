@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arhan Kumar Hazra | Interactive Portfolio ⚡
 
-## Getting Started
+> **WARNING:** This portfolio contains live digital currents, zero-gravity physics, and a high probability of simulated short circuits. Please wear appropriate PPE (Personal Protective Equipment) before scrolling. 
 
-First, run the development server:
+Welcome to my corner of the web. I'm Arhan, an AI Engineering student specializing in Robotics, IoT, and edge AI. Instead of a boring, static PDF, I decided to wire up a brutalist, zero-gravity Printed Circuit Board (PCB) right in the browser. 
+
+This isn't just a website; it's a fully functional (and destructible) physics sandbox. 
+
+## 🛠️ The Tech Stack (Under the Hood)
+Built for high-performance rendering and low-latency interactions, much like my hardware projects.
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS (Brutalist, grid-heavy design)
+- **3D/Physics Engine:** React Three Fiber, `@react-three/drei`, and Rapier (for zero-gravity IC manipulation)
+- **UI Physics:** Framer Motion
+
+## 🎮 Interactive Quirks & Hidden Features
+The background isn't just a video—it's a live circuit. Feel free to mess with it, but don't say I didn't warn you.
+
+* **Drag-and-Drop Desecration:** All ICs (Integrated Circuits) on the board have rigid-body physics. You can click, pull, and throw them out of their sockets.
+* **Break the Circuit:** Pulling an IC out actively breaks the digital current path, shutting off the downstream LEDs. 
+* **The Overload (💥 BOOM):** Want to see what happens when you shove an 8-pin IC into a 14-pin socket? Go ahead. Short-circuit the board. I dare you. (Make sure your volume is up for the screen-shake and explosion).
+* **The ATmega Easter Egg:** Try inspecting the massive 28-pin IC on the board. You might find some details about a certain official Arduino Certification, or maybe a hidden "Hallo!" for the German speakers out there. 
+
+## 🚀 Getting Started (Booting the System)
+
+If you want to clone this and run the simulation locally, follow the standard protocol. Ensure you click "Initialize" on the boot screen to bypass browser audio policies (so the explosions actually sound like explosions).
 
 ```bash
+# 1. Clone the repository and install dependencies
+npm install
+# or yarn install / pnpm install
+
+# 2. Power up the local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# or yarn dev / pnpm dev
