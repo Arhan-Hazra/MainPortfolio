@@ -21,18 +21,20 @@ export default function BootOverlay({ onBoot }: BootOverlayProps) {
     }
 
     const sequence = [
-      'SYS_CORE // ANTIGRAVITY EXPERIMENTAL ARCHITECTURE',
+      'CALIBRATING WATT-EVER RESISTANCE IS LEFT...',
       'INITIALIZING 2D RIGID-BODY KINEMATICS ENGINE...',
-      'CIRCUIT TRACE NETWORK: 4 NODES ONLINE',
-      'AUDIO SUBSYSTEM: WAITING FOR USER INPUT...',
-      'STATUS: READY TO BOOT'
+      "ARHAN'S CAFFEINE LEVELS: CRITICALLY OVERCLOCKED",
+      'AUDIO SUBSYSTEM: PATIENTLY WAITING FOR CONSENT...',
+      'AWAITING THE SACRED CLICK',
+      'STATUS: AWAITING THE SACRED CLICK'
     ];
 
     let current = 0;
     const interval = setInterval(() => {
       if (current < sequence.length) {
-        setLogLines((prev) => [...prev, sequence[current]]);
+        const lineToAdd = sequence[current];
         current++;
+        setLogLines((prev) => [...prev, lineToAdd]);
       } else {
         clearInterval(interval);
       }
@@ -85,7 +87,7 @@ export default function BootOverlay({ onBoot }: BootOverlayProps) {
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-neon animate-pulse" />
                 <span className="text-[11px] sm:text-xs text-neon tracking-wider sm:tracking-widest font-bold uppercase">
-                  SECURITY // AUDIO AUTH GATE
+                  SECURITY // HUMAN VERIFICATION GATE
                 </span>
               </div>
               <span className="text-[10px] sm:text-xs text-gray-500">REV 2026.09</span>
@@ -93,21 +95,21 @@ export default function BootOverlay({ onBoot }: BootOverlayProps) {
 
             {/* BIOS Log Terminal */}
             <div className="min-h-[100px] sm:min-h-[120px] space-y-1 sm:space-y-1.5 text-[11px] sm:text-xs text-gray-400 mb-6 sm:mb-8 border-l-2 border-neon/40 pl-3 sm:pl-4 overflow-x-hidden">
-              {logLines.map((line, idx) => (
-                <div key={idx} className="flex items-center gap-1.5 sm:gap-2 truncate">
-                  <span className="text-neon/80 shrink-0">&gt;</span>
-                  <span className={`truncate ${idx === logLines.length - 1 ? "text-white" : ""}`}>
-
-                    {line}
-                  </span>
-                </div>
-              ))}
+              {logLines
+                .filter((line): line is string => typeof line === 'string' && line.trim().length > 0)
+                .map((line, idx, arr) => (
+                  <div key={idx} className="flex items-center gap-1.5 sm:gap-2 truncate">
+                    <span className="text-neon/80 shrink-0">&gt;</span>
+                    <span className={`truncate ${idx === arr.length - 1 ? "text-white" : ""}`}>
+                      {line}
+                    </span>
+                  </div>
+                ))}
             </div>
 
             {/* Core Instruction */}
             <p className="text-[11px] sm:text-xs text-gray-400 mb-6 sm:mb-8 leading-relaxed">
-              Due to browser security policies, Web Audio synthesis (electrical spark buzz,
-              overload explosions, tactile clicks) requires a user authorization gesture.
+              Web browsers won't let cool sci-fi clicks and laser buzzes play without human permission. Tap the button to prove you're not a poorly disguised captcha bot.
             </p>
 
             {/* Action Button */}
@@ -120,7 +122,7 @@ export default function BootOverlay({ onBoot }: BootOverlayProps) {
               <span className="relative flex items-center justify-center gap-2 sm:gap-3">
                 <span className="inline-block w-2 h-2 bg-current animate-ping" />
                 <span className="sm:hidden">[ INITIALIZE // BOOT SYSTEM ]</span>
-                <span className="hidden sm:inline">[ INITIALIZE SYSTEM // BOOT CANVAS ]</span>
+                <span className="hidden sm:inline">[ ENTER ARHAN'S MATRIX // BOOT IT! ]</span>
               </span>
             </button>
 
